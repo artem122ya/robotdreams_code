@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Check if server started') {
             steps {
-                sh 'service  --status-all'
+                sh 'curl -s http://localhost:8080/'
             }
         }
     }
