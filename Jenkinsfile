@@ -4,9 +4,12 @@ pipeline {
     stages {
         stage('Check if server started') {
             steps {
-                ./lesson7/status.sh
+                script {
+                    sh ./lesson7/status.sh
+                }
             }
         }
     }
 }
 
+§
