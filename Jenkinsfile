@@ -4,9 +4,7 @@ pipeline {
     stages {
         stage('Check if server started') {
             steps {
-                script {
-                    sh ./lesson7/status.sh
-                }
+                sh 'curl -s http://localhost:80/'
             }
         }
     }
