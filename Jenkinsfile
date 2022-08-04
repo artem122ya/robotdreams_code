@@ -1,6 +1,6 @@
 
 pipeline {
-    agent { docker 'httpd:latest' }
+    agent { docker 'nginx:latest' }
     stages {
         stage('Check if server started') {
             steps {
