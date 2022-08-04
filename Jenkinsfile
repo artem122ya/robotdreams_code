@@ -1,10 +1,10 @@
 
 pipeline {
-    agent none
+    agent { docker 'httpd:latest' }
     stages {
-        stage('Example Build') {
+        stage('Check if server started') {
             steps {
-                echo 'Hello, world!'
+                sh ./lesson7/status.sh
             }
         }
     }
